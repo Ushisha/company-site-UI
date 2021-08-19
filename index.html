@@ -52,10 +52,8 @@
         </div>
         <!-- Side nav -->
         <ul class="side-nav" id="mobile-nav">
-          <h4 class="blue-grey darken-3 center">BizGrow</h4>
-          <li>
-            <a class="divider"></a>
-          </li>
+          <h4 class="blue-grey-text darken-3 center">BizGrow</h4>
+
           <li>
             <a href="#home">Home</a>
           </li>
@@ -188,7 +186,7 @@
         <h2>What our clients say</h2>
         <div class="row">
           <div class="col s12 m4">
-            <div class="card grey lighten-4 black-text z-depth-4">
+            <div class="card grey lighten-4 grey-text z-depth-2">
               <div class="card-content">
                 <p>
                   <em
@@ -204,7 +202,7 @@
             </div>
           </div>
           <div class="col s12 m4">
-            <div class="card grey lighten-4 black-text z-depth-4">
+            <div class="card grey lighten-4 grey-text z-depth-2">
               <div class="card-content">
                 <p>
                   <em
@@ -220,7 +218,7 @@
             </div>
           </div>
           <div class="col s12 m4">
-            <div class="card grey lighten-4 black-text z-depth-4">
+            <div class="card grey lighten-4 grey-text z-depth-2">
               <div class="card-content">
                 <p>
                   <em
@@ -280,7 +278,7 @@
           <div class="col l6 s12">
             <h5>Location</h5>
             <p>BizGrow</p>
-            <p>123 lane, London W12 3EW</p>
+            <p>123 lane, <br />London W12 3EW</p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
@@ -303,7 +301,7 @@
       </div>
       <div class="footer-copyright blue-grey darken-4">
         <div class="container">
-          © 2021 Copyright BizGrow
+          © 2021 BizGrow
           <a class="grey-text text-lighten-4 right" href="#home">
             <i class="material-icons left">keyboard_arrow_up</i> Back To Top
           </a>
@@ -320,42 +318,42 @@
     <script>
       $(document).ready(function () {
         // Init Sidenav
-        $('.button-collapse').sideNav();
+        $('.button-collapse').sideNav()
 
         //init ScrollSpy
-        $('.scrollspy').scrollSpy();
+        $('.scrollspy').scrollSpy()
         //ScrollFire
         const options = [
           {
             selector: '.main-text',
             offset: 0,
             callback: function (el) {
-              Materialize.fadeInImage($(el));
+              Materialize.fadeInImage($(el))
             },
           },
+
           {
             selector: '.navbar-fixed',
-            offset: 1500,
+            offset: 800,
             callback: function () {
-              $('nav')
-                .removeClass('transparent')
-                .addClass('blue-grey darken-3');
+              $('nav').removeClass('transparent')
+              $('nav').addClass('blue-grey darken-3')
             },
           },
-        ];
+        ]
 
-        Materialize.scrollFire(options);
+        Materialize.scrollFire(options)
 
-        const position = [51.509865, -0.118092];
-        const centerPosition = [51.531143, -0.159893];
+        const position = [51.509865, -0.118092]
+        const centerPosition = [51.531143, -0.159893]
 
         function showGoogleMaps() {
           // Map positions
-          const latLng = new google.maps.LatLng(position[0], position[1]);
+          const latLng = new google.maps.LatLng(position[0], position[1])
           const centerLatLng = new google.maps.LatLng(
             centerPosition[0],
             centerPosition[1]
-          );
+          )
 
           // Map options
           const mapOptions = {
@@ -364,13 +362,13 @@
             scaleControl: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             center: centerLatLng,
-          };
+          }
 
           // Create map
           map = new google.maps.Map(
             document.getElementById('googlemap'),
             mapOptions
-          );
+          )
 
           // Show Marker
           marker = new google.maps.Marker({
@@ -378,12 +376,12 @@
             map: map,
             draggable: false,
             animation: google.maps.Animation.DROP,
-          });
+          })
         }
 
         // Maps event
-        google.maps.event.addDomListener(window, 'load', showGoogleMaps);
-      });
+        google.maps.event.addDomListener(window, 'load', showGoogleMaps)
+      })
     </script>
   </body>
 </html>
