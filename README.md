@@ -4,7 +4,7 @@
 
 ### Links
 
-- Live Site URL: [https://app.netlify.com/sites/bizgrow-ushisha/settings/general](https://app.netlify.com/sites/bizgrow-ushisha/settings/general)
+- Live Site URL: [https://bizgrow-ushisha.netlify.app/](https://bizgrow-ushisha.netlify.app/)
 
 ### Built with
 
